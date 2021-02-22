@@ -14,4 +14,28 @@ output: [
 
 var PascalTriangle = function(n) {
 
+  var result = [];
+
+  for (var i = 0; i < n; i++){
+
+    result[i] = []
+
+    for (var z = 0; z <= i; z++) {
+
+      if (i == z | z == 0) {
+
+        result[i].push(1);
+
+      }
+      else{
+
+        result[i].push(result[i - 1][z] + result[i-1][z-1]);
+
+      }
+      
+    }
+
+  }
+  return result
+
 };
