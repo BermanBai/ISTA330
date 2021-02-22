@@ -17,6 +17,30 @@ output: true
 */
 
 var isMonotonic = function(input) {
+    
+    var monincreasing= function(arr) {
+
+        for (i = 1; i < arr.length; ++ i) {
+
+            if (arr[i] <= arr[i - 1]) {
+
+                return false;
+            }
+        }
+        return true;
+    }
+    var mondecreasing = function(arr) {
+
+        for (i = 1; i < arr.length; ++ i) {
+
+            if (arr[i] >= arr[i - 1]) {
+
+                return false;
+            }
+        }
+        return true;
+    }
+    return mondecreasing(input) || monincreasing(input);
 
 };
 
